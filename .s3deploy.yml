@@ -1,0 +1,4 @@
+---
+aws_bucket: www.myawesomesite.com
+skip_regex:    (pdf)|(mobi)|(epub)|(md)|(content/header.html)|(content/footer.html)|(txt)|(yml)|(Makefile)|(gitignore)|(xml)$
+
