@@ -1,0 +1,19 @@
+#!/bin/bash
+
+NEEDED_COMMANDS="pandoc"
+OPTIONAL_COMMANDS="kindlegen"
+
+for cmd in ${NEEDED_COMMANDS} ; do
+    if ! command -v ${cmd} &> /dev/null ; then
+        echo Please install ${cmd}!
+        exit -1
+    fi
+done
+
+for cmd in ${OPTIONAL_COMMANDS} ; do
+    if ! command -v ${cmd} &> /dev/null ; then
+        echo You probably want to install ${cmd}!
+    fi
+done
+
+echo "You're good!"

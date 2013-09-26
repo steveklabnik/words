@@ -48,7 +48,10 @@ site: $(patsubst %.md,%.html,$(wildcard content/*.md)) content/single-page.html
 ship: all
 	s3deploy
 
-.PHONY: clean
+.PHONY: clean check
 
 clean:
 	rm -f $(CLEAN_FILES)
+
+check:
+	./check
